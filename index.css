@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --main-color: #1A1110;
+    --secondary-color: #FFD23F;
+  }
+
+body {
+    background-color: var(--main-color);
+    font-family: "Roboto";
+    font-size: x-large;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+button {
+    color: var(--main-color);
+    cursor: pointer;
+    font-family: "Roboto";
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: small;
+    background-color: var(--secondary-color);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.main_container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #1A1110;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: var(--secondary-color);
+}
+
+.shrug_button {
+    background: none;
+    border: none;
+    font-size: xxx-large;
+}
+
+.shrug_button:hover {
+    transform: scale(1.1);
+}
