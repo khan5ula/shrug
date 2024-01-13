@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-    --main-color: #1A1110;
-    --secondary-color: #FFD23F;
+    --text-color: #1A1110;
+    --yellow: #FFD23F;
+    --background: #FFFDD0;
   }
 
 body {
-    background-color: var(--main-color);
+    background-color: var(--text-color);
     font-family: "Roboto";
     font-size: x-large;
     display: flex;
@@ -16,7 +17,7 @@ body {
 }
 
 button {
-    color: var(--main-color);
+    color: var(--text-color);
     cursor: pointer;
     font-family: "Roboto";
 }
@@ -26,7 +27,7 @@ footer {
     justify-content: center;
     padding: 10px;
     font-size: small;
-    background-color: var(--secondary-color);
+    background-color: var(--background);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 }
@@ -40,7 +41,7 @@ footer {
     color: #1A1110;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background-color: var(--secondary-color);
+    background-color: var(--yellow);
 }
 
 .shrug_button {
@@ -52,3 +53,21 @@ footer {
 .shrug_button:hover {
     transform: scale(1.1);
 }
+
+.shrug_button:active {
+    transform: translateY(4px);
+}
+
+.alert {
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    font-size: medium;
+    border-radius: 10px;
+    margin-right: 250px;
+    margin-top: 10px;
+    background-color: var(--background);
+    color: var(--main-color);
+    margin-bottom: 15px;
+    visibility: hidden;
+  }

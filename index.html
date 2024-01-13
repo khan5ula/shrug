@@ -16,22 +16,25 @@
 
 <body>
   <div class="main_container">
-    <div id="prompt">
+    <div id="notification" class="alert">
+      Copied!
+    </div>
+    <div>
       <p>Click to copy shrug</p>
     </div>
     <button class="shrug_button" onclick=copyShrug()>
       ¯\_(ツ)_/¯
     </button>
     <script>
-      var shrug = " ¯\\_(ツ)_/¯"; function copyShrug() {
+      var shrug = " ¯\\_(ツ)_/¯";
+      function copyShrug() {
         console.log(" ¯\\_(ツ)_/¯");
         var temp_input = document.createElement("input");
         temp_input.value = shrug; document.body.appendChild(temp_input); temp_input.select(); document.execCommand("copy");
         document.body.removeChild(temp_input);
-        var result = document.getElementById("prompt");
-        result.innerHTML = "<p>Copied!</p>";
+        document.getElementById("notification").style.visibility = "visible";
         setTimeout(function () {
-          result.innerHTML = "<p>Click to copy shrug</p>";
+          document.getElementById("notification").style.visibility = "hidden";
         }, 1000);
       } 
     </script>
@@ -39,7 +42,7 @@
   <footer id="footer">©</footer>
   <script>
     var date = new Date().getFullYear();
-    document.getElementById('footer').innerText = `© ${date}`;
+    document.getElementById('footer').innerText = `© ${date} ¯\\_(ツ)_/¯`;
   </script>
 
 </body>
