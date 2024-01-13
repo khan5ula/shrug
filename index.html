@@ -29,13 +29,15 @@
       var shrug = " ¯\\_(ツ)_/¯";
       function copyShrug() {
         console.log(" ¯\\_(ツ)_/¯");
-        var temp_input = document.createElement("input");
-        temp_input.value = shrug; document.body.appendChild(temp_input); temp_input.select(); document.execCommand("copy");
-        document.body.removeChild(temp_input);
-        document.getElementById("notification").style.visibility = "visible";
-        setTimeout(function () {
-          document.getElementById("notification").style.visibility = "hidden";
-        }, 1000);
+        try {
+          navigator.clipboard.writeText("¯\\_(ツ)_/¯");
+          document.getElementById("notification").style.visibility = "visible";
+          setTimeout(function () {
+            document.getElementById("notification").style.visibility = "hidden";
+          }, 1000);
+        } catch (error) {
+          console.log(`failed to copy: ${error}`);
+        }
       } 
     </script>
   </div>
@@ -44,7 +46,6 @@
     var date = new Date().getFullYear();
     document.getElementById('footer').innerText = `© ${date} ¯\\_(ツ)_/¯`;
   </script>
-
 </body>
 
 </html>
